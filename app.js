@@ -15,3 +15,33 @@
     });
   }
 })();
+
+(function(){
+  const form = document.getElementById('contactForm');
+
+  // Cambia este número por tu WhatsApp (con código de país)
+  const phone = "50370000000"; // Ejemplo El Salvador
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Evita que recargue la página
+
+      // Tomar los valores del formulario
+      const name = document.getElementById('name').value.trim();
+      const contact = document.getElementById('contact').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Crear mensaje para WhatsApp
+      const text = `Hola, soy ${name}. Mi contacto es ${contact}. 
+Quisiera más información sobre: ${message}`;
+
+      // Convertir a URL segura
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+      // Abrir WhatsApp en una nueva pestaña
+      window.open(url, '_blank');
+    });
+  }
+})();
+
+
