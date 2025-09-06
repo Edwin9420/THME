@@ -20,7 +20,7 @@
   const form = document.getElementById('contactForm');
 
   // Cambia este número por tu WhatsApp (con código de país)
-  const phone = "50370000000"; // Ejemplo El Salvador
+  const phone = "50376707431"; // 
 
   if (form) {
     form.addEventListener('submit', function(e) {
@@ -43,5 +43,6 @@ Quisiera más información sobre: ${message}`;
     });
   }
 })();
+
 
 
