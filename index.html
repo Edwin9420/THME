@@ -196,12 +196,13 @@
             <a class="btn btn--outline" href="#project">Ver metodología</a>
           </div>
         </div>
-        <form class="form" onsubmit="return false;">
-          <input type="text" placeholder="Tu nombre">
-          <input type="text" placeholder="Email o WhatsApp">
-          <textarea placeholder="Cuéntanos tu idea o necesidad"></textarea>
-          <button class="btn" type="submit">Enviar</button>
-        </form>
+       <form class="form" id="contactForm">
+  <input id="name" type="text" placeholder="Tu nombre" required>
+  <input id="contact" type="text" placeholder="Email o WhatsApp" required>
+  <textarea id="message" placeholder="Cuéntanos tu idea o necesidad" required></textarea>
+  <button class="btn" type="submit">Enviar</button>
+</form>
+
       </div>
     </section>
   </main>
@@ -223,4 +224,5 @@
   <script src="app.js"></script>
 </body>
 </html>
+
 
